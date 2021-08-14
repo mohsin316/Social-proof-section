@@ -1,0 +1,237 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --dark-purple: hsl(300, 43%, 22%);
+    --softpink:hsl(333, 80%, 67%);
+    --dark-grayish-purple:  hsl(303, 10%, 53%);
+    --light-grayish-purple:hsl(300, 24%, 96%);
+    --white:hsl(0, 0%, 100%);
+
+    --ff:'Spartan', sans-serif;
+    --ffl:400;
+    --ffm:500;
+    --ffb:700;
+}
+
+body{
+    
+    font-family: var(--ff);
+    text-align: center;
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+.main-container{
+    padding: 5rem 1rem;
+    display: grid;
+    place-items: center;
+}
+
+.flex-container{
+    background-color:var(--white);
+    max-width: 350px;
+}
+
+.main-title{
+    color: var(--dark-purple);
+    margin-bottom: 2rem;
+    font-weight: var(--ffb);
+}
+.main-text{
+    width: 100%;
+    font-size: .9rem;
+    font-weight: var(--ffm);
+    line-height: 1.25rem;
+    text-align: center;
+    color: var(--dark-grayish-purple);
+}
+
+.star-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem; 
+    margin-block: 3rem ;
+}
+
+.review{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: .75rem 2rem;
+    gap:.75rem;
+    background-color:var(--light-grayish-purple);
+    border-radius: 10px;
+    width: 90%;
+}
+.review .star{
+    height: 15px;
+    width: 15px;
+    background-repeat: repeat-x;
+    display: inline-block;
+}
+.star-holder{
+    display: flex;
+    gap: .5rem;
+}
+
+.comment{
+    color: var(--dark-purple);
+    font-weight: var(--ffb);
+}
+
+.card-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card{
+    background-color: var(--dark-purple);
+    padding: 2.5rem 2rem;
+    border-radius: 10px;
+}
+.img-name{
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    font-size: .8rem;
+    opacity: .95;
+
+}
+
+.profile-pic{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.profile-img{
+    border-radius: 50%;
+}
+
+.name{
+    display: flex;
+    flex-direction: column;
+    gap: .35rem;
+    align-items: flex-start;
+    justify-content: center;
+    
+}
+.name-review{
+    color: var(--light-grayish-purple);
+    font-weight: var(--ffb);
+    letter-spacing: 1px;
+}
+.review-person{
+    width: 100%;
+    margin-top: 2rem;
+    text-align: left;
+    color: var(--light-grayish-purple);
+    line-height: 1.5rem;
+    font-size: .85rem;
+    font-weight: var(--ffm);
+}
+span{
+    color: var(--softpink);
+    font-weight: var(--ffl);
+}
+
+@media  (min-width:1000px) {
+
+    .flex-container{
+        display: flex;
+        flex-wrap: wrap;
+        max-width:90%;
+    }
+    .desc-container{    
+        flex:1 1 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+    .main-title{
+        text-align: start;
+        margin: 0;
+        max-width: 70%;
+        line-height: 2.5rem;
+        font-size: 2.5rem;
+
+    }
+    .main-text{
+        text-align: start;
+        max-width: 80%;
+        line-height: 1.5rem;
+    }
+
+    .star-container{
+        flex: 1 1 50%;
+        margin: 0;
+        width: 100%;
+        display: flex;
+        gap: .9rem;
+        justify-content: flex-start;
+        
+    }
+    .review{
+        flex-direction: row;
+        padding: 1rem  .9rem;
+        max-width: 80%;
+        justify-content: flex-start;
+        
+    }
+    .review p{
+        font-size: .9rem;
+        text-align: left;
+        padding-left: 1.5rem;  
+    }
+    .star-holder{
+        justify-self: center;
+        align-self:center;
+        padding-left: 1rem;
+    }
+    .one{
+        justify-self: flex-start;
+        align-self: flex-start;
+    }
+
+    .three{
+        justify-self: flex-end;
+        align-self: flex-end;
+    }
+    .card-container{
+        flex: 1 1 100%;
+       
+    }
+    
+    .card-container{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        margin-top: 5rem;
+        gap: 2rem;
+        height: 400px;
+    }
+
+    .card{
+        max-height: 275px;
+    }
+    .first{
+        grid-column: 1/5;
+        
+    }
+
+    .second{
+        grid-column: 5/9;
+        margin-top: 1rem;
+    }
+    .third{
+        grid-column: 9/13;
+        margin-top: 2rem;
+    }
+}
